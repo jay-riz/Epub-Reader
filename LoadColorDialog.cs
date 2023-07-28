@@ -74,21 +74,18 @@ namespace WindowsFormsApp3
             }
         }
 
+        static public void LogErros(string EX)
+        {
+            string currentTime = DateTime.Now.ToString();
+            string ePath = Application.StartupPath + @"\.cache\_errorLog.txt";
+            File.AppendAllText(ePath, currentTime + " " + EX);
+        }
 
+       
         private void button3_Click(object sender, EventArgs e)
         {
+            Form2.PressRefresh = false;
             Form2.KIERLSEARCHFORCSS();
-
-           
-
-            //var stringDic = new Dictionary<string, string>();
-            //stringDic.Add("Color", " ");
-            //stringDic.Add("[", " ");
-            //stringDic.Add("]", " ");
-            
-
-            //string cf = MultipleReplace(colorFont, stringDic);
-            //string bg = MultipleReplace(colorFont, stringDic);
             try
             {
                 for (int i = 0; i < Form2.CSSFOUNDList.Count; i++)
@@ -96,25 +93,29 @@ namespace WindowsFormsApp3
                     File.AppendAllText(Form2.CSSFOUNDList[i], "body { background-color: " + btnBgColor + ";  } h1,h2,h3,h4, p { color: " + btnFontColor + "; }"); ;
 
                 }
-            
-                //File.WriteAllText(CSSFOUNDList[0], "h1,h2,h3,h4,p{ font-size: " + baseFontSize.ToString() + "px; font-weight: bold; }");
-                //File.WriteAllText(CSSFOUNDList[1], "h1,h2,h3,h4,p{ font-size: " + baseFontSize.ToString() + "px; font-weight: bold; } ");
+   
             }
-            catch
+            catch (Exception ex)
             {
-                ;
+                LogErros(ex.ToString());
             }
 
-
-
             
-           
+
+
+
+
 
         }
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             Form2.BoolReset = false;
+        }
+
+        private void LoadColorDialog_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

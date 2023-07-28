@@ -22,3 +22,27 @@ C:\Users\Ashlera\source\repos\Epub Reader\obj\Debug\Epub-Reader.csproj.CoreCompi
 C:\Users\Ashlera\source\repos\Epub Reader\obj\Debug\Epub-Reader.csproj.CopyComplete
 C:\Users\Ashlera\source\repos\Epub Reader\obj\Debug\epub_reader.exe
 C:\Users\Ashlera\source\repos\Epub Reader\obj\Debug\epub_reader.pdb
+C:\Users\Ashlera\source\repos\Epub-Reader\bin\Debug\epub_reader.exe.config
+C:\Users\Ashlera\source\repos\Epub-Reader\bin\Debug\epub_reader.exe
+C:\Users\Ashlera\source\repos\Epub-Reader\bin\Debug\epub_reader.pdb
+C:\Users\Ashlera\source\repos\Epub-Reader\bin\Debug\Microsoft.Data.Sqlite.dll
+C:\Users\Ashlera\source\repos\Epub-Reader\bin\Debug\SQLitePCLRaw.core.dll
+C:\Users\Ashlera\source\repos\Epub-Reader\bin\Debug\System.Data.SQLite.dll
+C:\Users\Ashlera\source\repos\Epub-Reader\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\Ashlera\source\repos\Epub-Reader\bin\Debug\System.Memory.dll
+C:\Users\Ashlera\source\repos\Epub-Reader\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\Ashlera\source\repos\Epub-Reader\bin\Debug\System.Buffers.dll
+C:\Users\Ashlera\source\repos\Epub-Reader\bin\Debug\Microsoft.Data.Sqlite.xml
+C:\Users\Ashlera\source\repos\Epub-Reader\bin\Debug\System.Data.SQLite.xml
+C:\Users\Ashlera\source\repos\Epub-Reader\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\Ashlera\source\repos\Epub-Reader\obj\Debug\Epub-Reader.csproj.AssemblyReference.cache
+C:\Users\Ashlera\source\repos\Epub-Reader\obj\Debug\Epub-Reader.csproj.SuggestedBindingRedirects.cache
+C:\Users\Ashlera\source\repos\Epub-Reader\obj\Debug\WindowsFormsApp3.Form2.resources
+C:\Users\Ashlera\source\repos\Epub-Reader\obj\Debug\WindowsFormsApp3.LoadColorDialog.resources
+C:\Users\Ashlera\source\repos\Epub-Reader\obj\Debug\WindowsFormsApp3.mainWindow.resources
+C:\Users\Ashlera\source\repos\Epub-Reader\obj\Debug\WindowsFormsApp3.Properties.Resources.resources
+C:\Users\Ashlera\source\repos\Epub-Reader\obj\Debug\Epub-Reader.csproj.GenerateResource.cache
+C:\Users\Ashlera\source\repos\Epub-Reader\obj\Debug\Epub-Reader.csproj.CoreCompileInputs.cache
+C:\Users\Ashlera\source\repos\Epub-Reader\obj\Debug\Epub-Reader.csproj.CopyComplete
+C:\Users\Ashlera\source\repos\Epub-Reader\obj\Debug\epub_reader.exe
+C:\Users\Ashlera\source\repos\Epub-Reader\obj\Debug\epub_reader.pdb

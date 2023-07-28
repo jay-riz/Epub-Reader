@@ -117,6 +117,8 @@ namespace WindowsFormsApp3
 
            
 
+
+
         }
 
 
@@ -659,6 +661,9 @@ namespace WindowsFormsApp3
 
         public static bool BoolReset = false;
 
+        public static bool PressRefresh = false;
+       
+
         private void timer1_Tick(object sender, EventArgs e)
         {
             WbRefresh();
@@ -667,6 +672,12 @@ namespace WindowsFormsApp3
             {
                 btnInvisible.PerformClick();
                 BoolReset = true;
+            }
+
+            if (PressRefresh == false)
+            {
+                btnRefresh.PerformClick();
+                PressRefresh = true;
             }
 
         }
@@ -690,6 +701,12 @@ namespace WindowsFormsApp3
             }
 
 
+        }
+
+        private void btnRefresh_Click(object sender, EventArgs e)
+        {
+            webBrowser1.Refresh();
+            
         }
     }
 

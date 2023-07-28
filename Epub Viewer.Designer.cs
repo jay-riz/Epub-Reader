@@ -48,6 +48,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.btnInvisible = new System.Windows.Forms.Button();
+            this.btnRefresh = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -184,7 +185,6 @@
             // timer1
             // 
             this.timer1.Enabled = true;
-            this.timer1.Interval = 500;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // btnSepia
@@ -260,11 +260,22 @@
             this.btnInvisible.UseVisualStyleBackColor = true;
             this.btnInvisible.Click += new System.EventHandler(this.button1_Click_1);
             // 
+            // btnRefresh
+            // 
+            this.btnRefresh.Location = new System.Drawing.Point(22, 7);
+            this.btnRefresh.Name = "btnRefresh";
+            this.btnRefresh.Size = new System.Drawing.Size(10, 10);
+            this.btnRefresh.TabIndex = 13;
+            this.btnRefresh.Text = "button1";
+            this.btnRefresh.UseVisualStyleBackColor = true;
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(940, 430);
+            this.Controls.Add(this.btnRefresh);
             this.Controls.Add(this.btnInvisible);
             this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.label2);
@@ -308,5 +319,6 @@
         public System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.WebBrowser webBrowser1;
         private System.Windows.Forms.Button btnInvisible;
+        private System.Windows.Forms.Button btnRefresh;
     }
 }

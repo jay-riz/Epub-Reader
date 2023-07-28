@@ -95,9 +95,9 @@ namespace WindowsFormsApp3
                     ErrorDialog("File is already exist!"); return;
                 };
             }
-            catch
+            catch (Exception ex)
             {
-                  
+                LoadColorDialog.LogErros(ex.ToString());
             }
 
         }
@@ -112,9 +112,9 @@ namespace WindowsFormsApp3
             {
                 sqlite_conn.Open();
             }
-            catch
+            catch (Exception ex)
             {
-                  ;
+                LoadColorDialog.LogErros(ex.ToString()) ;
             }
             return sqlite_conn;
         }
@@ -216,9 +216,9 @@ namespace WindowsFormsApp3
             {
                 CreateTable(sqlite_conn);
             }
-            catch
+            catch (Exception ex)
             {
-                  ;
+                LoadColorDialog.LogErros(ex.ToString());
             }
             ReadData(sqlite_conn);
 
@@ -245,9 +245,10 @@ namespace WindowsFormsApp3
 
                 Process.Start(startInfo);
             }
-            catch (Exception)
+            catch (Exception ex)
             {
                 MessageBox.Show(string.Format("{0} Directory does not exist!", LIBRARY_PATH));
+                LoadColorDialog.LogErros(ex.ToString());
             }
         }
 
@@ -299,9 +300,9 @@ namespace WindowsFormsApp3
 
                 }
             }
-            catch (System.ArgumentOutOfRangeException)
+            catch (System.ArgumentOutOfRangeException ex)
             {
-                  ;
+                LoadColorDialog.LogErros(ex.ToString());
             }
             
         }
@@ -358,9 +359,9 @@ namespace WindowsFormsApp3
             {
                 Directory.Delete(LIBRARY_PATH + @"\" + textBox1.Text, true);
             }
-            catch
+            catch (Exception ex)
             {
-                  ;
+                LoadColorDialog.LogErros(ex.ToString());
             }
             textBox1.Clear();
             textBox2.Clear();

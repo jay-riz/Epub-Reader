@@ -121,7 +121,8 @@
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "LoadColorDialog";
-            this.Text = "LoadColorDialog";
+            this.Text = "Change Background and Font Color";
+            this.Load += new System.EventHandler(this.LoadColorDialog_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
