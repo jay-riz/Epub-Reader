@@ -97,7 +97,7 @@ namespace WindowsFormsApp3
             }
             catch (Exception ex)
             {
-                LoadColorDialog.LogErros(ex.ToString());
+                LoadColorDialog.LogError(ex.ToString());
             }
 
         }
@@ -114,7 +114,7 @@ namespace WindowsFormsApp3
             }
             catch (Exception ex)
             {
-                LoadColorDialog.LogErros(ex.ToString()) ;
+                LoadColorDialog.LogError(ex.ToString()) ;
             }
             return sqlite_conn;
         }
@@ -218,7 +218,7 @@ namespace WindowsFormsApp3
             }
             catch (Exception ex)
             {
-                LoadColorDialog.LogErros(ex.ToString());
+                LoadColorDialog.LogError(ex.ToString());
             }
             ReadData(sqlite_conn);
 
@@ -248,7 +248,7 @@ namespace WindowsFormsApp3
             catch (Exception ex)
             {
                 MessageBox.Show(string.Format("{0} Directory does not exist!", LIBRARY_PATH));
-                LoadColorDialog.LogErros(ex.ToString());
+                LoadColorDialog.LogError(ex.ToString());
             }
         }
 
@@ -302,7 +302,7 @@ namespace WindowsFormsApp3
             }
             catch (System.ArgumentOutOfRangeException ex)
             {
-                LoadColorDialog.LogErros(ex.ToString());
+                LoadColorDialog.LogError(ex.ToString());
             }
             
         }
@@ -361,7 +361,7 @@ namespace WindowsFormsApp3
             }
             catch (Exception ex)
             {
-                LoadColorDialog.LogErros(ex.ToString());
+                LoadColorDialog.LogError(ex.ToString());
             }
             textBox1.Clear();
             textBox2.Clear();

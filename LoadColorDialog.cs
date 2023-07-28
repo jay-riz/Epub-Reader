@@ -74,11 +74,11 @@ namespace WindowsFormsApp3
             }
         }
 
-        static public void LogErros(string EX)
+        static public void LogError(string EX)
         {
-            string currentTime = DateTime.Now.ToString();
+            string currentTime = "[" + DateTime.Now.ToString() + "]: ";
             string ePath = Application.StartupPath + @"\.cache\_errorLog.txt";
-            File.AppendAllText(ePath, currentTime + " " + EX);
+            File.AppendAllText(ePath, currentTime + EX + "\n\n");
         }
 
        
@@ -97,7 +97,7 @@ namespace WindowsFormsApp3
             }
             catch (Exception ex)
             {
-                LogErros(ex.ToString());
+                LogError(ex.ToString());
             }
 
             
