@@ -8,12 +8,15 @@ using System.IO;
 using System.Net.NetworkInformation;
 using System.Windows.Forms;
 using System.Linq;
+using System.Drawing;
 
 namespace WindowsFormsApp3
 {
 
     public partial class mainWindow : Form
     {
+       public static string colorPanelofMainWindow = "#045c73";
+       public static string colorFontOfMainWindow = "#f68818";
        public string LIBRARY_PATH = Application.StartupPath + @"\Epub Library";
        public List<string> textOfPath = new List<string> ();
        public List<string> TocTocTocFolder = new List<string>();
@@ -21,23 +24,24 @@ namespace WindowsFormsApp3
         {
             InitializeComponent();
         }
-         public void CreateDir(string _crePath)
-         {
+        public void CreateDir(string _crePath)
+        {
             if (!Directory.Exists(_crePath))
             {
                 Directory.CreateDirectory(_crePath);
             }
-         }
 
-         public void ErrorDialog(string text)
-         {
-            MessageBox.Show(text, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-         }
+        }
 
-         public void ExtractToZip(string zip, string extractDir)
-         {
-            System.IO.Compression.ZipFile.ExtractToDirectory(zip, extractDir);
-         }
+        public void ErrorDialog(string text)
+        {
+        MessageBox.Show(text, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+
+        public void ExtractToZip(string zip, string extractDir)
+        {
+        System.IO.Compression.ZipFile.ExtractToDirectory(zip, extractDir);
+        }
 
 
         public void EPUB_LOAD()
@@ -192,6 +196,9 @@ namespace WindowsFormsApp3
             }
 
         }
+
+
+        
         private void Form1_Load(object sender, EventArgs e)
         {
            
@@ -385,7 +392,41 @@ namespace WindowsFormsApp3
 
         }
 
+        private void AllFontColors(string colorhex)
+        {
+            label2.ForeColor = ColorTranslator.FromHtml(colorhex);
+            btnAddBook.ForeColor = ColorTranslator.FromHtml(colorhex);
+            btnViewOpen.ForeColor = ColorTranslator.FromHtml(colorhex);
+            btnLibrary.ForeColor = ColorTranslator.FromHtml(colorhex);
+            btnColorTheme.ForeColor = ColorTranslator.FromHtml(colorhex);
+            lblCaptitle.ForeColor = ColorTranslator.FromHtml(colorhex);
+        }
+
+        private void AllPanelColors(string panelhex)
+        {
+            rightPanel.BackColor = ColorTranslator.FromHtml(panelhex);
+            leftPanel.BackColor = ColorTranslator.FromHtml(panelhex);
+            btnAddBook.BackColor = ColorTranslator.FromHtml(panelhex);
+            btnViewOpen.BackColor = ColorTranslator.FromHtml(panelhex);
+            btnLibrary.BackColor = ColorTranslator.FromHtml(panelhex);
+            btnColorTheme.BackColor = ColorTranslator.FromHtml(panelhex);
+            lblCaptitle.BackColor = ColorTranslator.FromHtml(panelhex);
+        }
+
         private void buttonDesigns3_Click_1(object sender, EventArgs e)
+        {
+            LoadColorDialog lcd = new LoadColorDialog();
+            LoadColorDialog.mainWindoIsUsing = true;
+            lcd.Show();
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            AllFontColors(colorFontOfMainWindow);
+            AllPanelColors(colorPanelofMainWindow);
+        }
+
+        private void leftPanel_Paint(object sender, PaintEventArgs e)
         {
 
         }

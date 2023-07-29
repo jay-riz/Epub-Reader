@@ -13,8 +13,13 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace WindowsFormsApp3
 {
+
     public partial class LoadColorDialog : Form
     {
+        public static bool mainWindoIsUsing = false;
+        public static bool epubViewIsUsing = false;
+
+        
         public LoadColorDialog()
         {
             InitializeComponent();
@@ -47,6 +52,8 @@ namespace WindowsFormsApp3
 
         public string btnFontColor;
         public string btnBgColor;
+        public string mainFontColor;
+        public string mainBgColor;
 
         public void FontRawToHexColorDialog()
         {
@@ -58,6 +65,8 @@ namespace WindowsFormsApp3
             {
                 button1.BackColor = cDialog.Color;
                 btnFontColor = String.Format("#{0:X2}{1:X2}{2:X2}", cDialog.Color.R, cDialog.Color.G, cDialog.Color.B);
+                mainFontColor = String.Format("#{0:X2}{1:X2}{2:X2}", cDialog.Color.R, cDialog.Color.G, cDialog.Color.B);
+
             }
         }
 
@@ -71,6 +80,7 @@ namespace WindowsFormsApp3
             {
                 button2.BackColor = cDialog.Color;
                 btnBgColor = String.Format("#{0:X2}{1:X2}{2:X2}", cDialog.Color.R, cDialog.Color.G, cDialog.Color.B);
+                mainBgColor = String.Format("#{0:X2}{1:X2}{2:X2}", cDialog.Color.R, cDialog.Color.G, cDialog.Color.B);
             }
         }
 
@@ -81,11 +91,11 @@ namespace WindowsFormsApp3
             File.AppendAllText(ePath, currentTime + EX + "\n\n");
         }
 
-       
-        private void button3_Click(object sender, EventArgs e)
+        private void ForEpubViewColor()
         {
             Form2.PressRefresh = false;
             Form2.KIERLSEARCHFORCSS();
+
             try
             {
                 for (int i = 0; i < Form2.CSSFOUNDList.Count; i++)
@@ -93,19 +103,42 @@ namespace WindowsFormsApp3
                     File.AppendAllText(Form2.CSSFOUNDList[i], "body { background-color: " + btnBgColor + ";  } h1,h2,h3,h4, p { color: " + btnFontColor + "; }"); ;
 
                 }
-   
+
             }
             catch (Exception ex)
             {
                 LogError(ex.ToString());
             }
 
+        }
+
+        private void ForMainWindowColor()
+        {
+            //mainWindow.colorFontOfMainWindow = mainFontColor;
+            //mainWindow.colorPanelofMainWindow = mainBgColor;
+
+            File.WriteAllText(Application.StartupPath + @"/.cache/mainFont_color.txt", mainFontColor);
+            File.WriteAllText(Application.StartupPath + @"/.cache/mainBackground_color.txt", mainBgColor);
+
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            if (epubViewIsUsing == true)
+            {
+                ForEpubViewColor();
+                MessageBox.Show("Changed Sucessfully", "Info");
+                epubViewIsUsing = false;
+            }
+           
+            if
+                (mainWindoIsUsing == true){
+                ForMainWindowColor();
+                MessageBox.Show("Changed Sucessfully", "Info");
+                mainWindoIsUsing = false;
+            }
             
-
-
-
-
-
         }
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

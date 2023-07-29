@@ -656,6 +656,7 @@ namespace WindowsFormsApp3
         private void button3_Click_1(object sender, EventArgs e)
         {
             LoadColorDialog lcd = new LoadColorDialog();
+            LoadColorDialog.epubViewIsUsing = true;
             lcd.Show();
         }
 
