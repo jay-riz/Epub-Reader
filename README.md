@@ -5,6 +5,7 @@ An Epub Reader that is written in C# (.NET Framework).
 Please download/import the required references listed below:
 
 <h5>From NuGet Package:</h5> System.Data.SQLite 
+.
 ```
 PM> NuGet\Install-Package System.Data.SQLite -Version 1.0.118
 ```
