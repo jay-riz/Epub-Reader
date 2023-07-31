@@ -105,6 +105,7 @@
     <Compile Include="Epub Viewer.Designer.cs">
       <DependentUpon>Epub Viewer.cs</DependentUpon>
     </Compile>
+    <Compile Include="OtherFuncs\Logging.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Epub Viewer.resx">

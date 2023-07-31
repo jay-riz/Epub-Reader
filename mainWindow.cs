@@ -9,6 +9,7 @@ using System.Net.NetworkInformation;
 using System.Windows.Forms;
 using System.Linq;
 using System.Drawing;
+using WindowsFormsApp3.OtherFuncs;
 
 namespace WindowsFormsApp3
 {
@@ -46,7 +47,7 @@ namespace WindowsFormsApp3
 
         public void EPUB_LOAD()
         {
-            try
+            try //start
             {
                 OpenFileDialog openFileDialog = new OpenFileDialog();
                 openFileDialog.Filter = "EPUB files (*.epub)|*.epub;";
@@ -99,10 +100,10 @@ namespace WindowsFormsApp3
                     ErrorDialog("File is already exist!"); return;
                 };
             }
-            catch (Exception ex)
+            catch (System.ArgumentException ex)
             {
-                LoadColorDialog.LogError(ex.ToString());
-            }
+                Logging.LogError(ex.ToString());
+            } // end
 
         }
         static public SQLiteConnection CreateConnection()
@@ -118,18 +119,26 @@ namespace WindowsFormsApp3
             }
             catch (Exception ex)
             {
-                LoadColorDialog.LogError(ex.ToString()) ;
+                Logging.LogError(ex.ToString()) ;
             }
             return sqlite_conn;
         }
 
        private void CreateTable(SQLiteConnection conn)
         {
-            SQLiteCommand sqlite_cmd;
-            string createSqlQuery = "CREATE TABLE kierl_table(book_name VARCHAR(20), file_path VARCHAR(20));";
-            sqlite_cmd = conn.CreateCommand();
-            sqlite_cmd.CommandText = createSqlQuery;
-            sqlite_cmd.ExecuteNonQuery();
+            try
+            {
+                SQLiteCommand sqlite_cmd;
+                string createSqlQuery = "CREATE TABLE kierl_table(book_name VARCHAR(20), file_path VARCHAR(20));";
+                sqlite_cmd = conn.CreateCommand();
+                sqlite_cmd.CommandText = createSqlQuery;
+                sqlite_cmd.ExecuteNonQuery();
+            }
+            catch (System.Data.SQLite.SQLiteException ex)
+            {
+                Logging.LogError(ex.ToString());
+            }
+           
         }
 
         private static void InsertData(SQLiteConnection conn, string xName, string xfilePath)
@@ -225,7 +234,7 @@ namespace WindowsFormsApp3
             }
             catch (Exception ex)
             {
-                LoadColorDialog.LogError(ex.ToString());
+                Logging.LogError(ex.ToString());
             }
             ReadData(sqlite_conn);
 
@@ -255,7 +264,7 @@ namespace WindowsFormsApp3
             catch (Exception ex)
             {
                 MessageBox.Show(string.Format("{0} Directory does not exist!", LIBRARY_PATH));
-                LoadColorDialog.LogError(ex.ToString());
+                Logging.LogError(ex.ToString());
             }
         }
 
@@ -309,7 +318,7 @@ namespace WindowsFormsApp3
             }
             catch (System.ArgumentOutOfRangeException ex)
             {
-                LoadColorDialog.LogError(ex.ToString());
+                Logging.LogError(ex.ToString());
             }
             
         }
@@ -368,7 +377,7 @@ namespace WindowsFormsApp3
             }
             catch (Exception ex)
             {
-                LoadColorDialog.LogError(ex.ToString());
+                Logging.LogError(ex.ToString());
             }
             textBox1.Clear();
             textBox2.Clear();

@@ -9,6 +9,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WindowsFormsApp3.OtherFuncs;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace WindowsFormsApp3
@@ -84,12 +85,7 @@ namespace WindowsFormsApp3
             }
         }
 
-        static public void LogError(string EX)
-        {
-            string currentTime = "[" + DateTime.Now.ToString() + "]: ";
-            string ePath = Application.StartupPath + @"\.cache\_errorLog.txt";
-            File.AppendAllText(ePath, currentTime + EX + "\n\n");
-        }
+       
 
         private void ForEpubViewColor()
         {
@@ -107,7 +103,7 @@ namespace WindowsFormsApp3
             }
             catch (Exception ex)
             {
-                LogError(ex.ToString());
+                Logging.LogError(ex.ToString());
             }
 
         }

@@ -8,7 +8,7 @@ using System.Web;
 using System.Windows.Forms;
 
 
-namespace WindowsFormsApp3
+namespace WindowsFormsApp3  
 {
 
     public partial class Form2 : Form
