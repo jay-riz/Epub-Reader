@@ -103,7 +103,7 @@ namespace WindowsFormsApp3
             }
             catch (Exception ex)
             {
-                Logging.LogError(ex.ToString());
+                Global.LogError(ex.ToString());
             }
 
         }

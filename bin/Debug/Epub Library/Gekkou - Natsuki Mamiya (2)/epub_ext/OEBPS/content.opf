@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package version="2.0" unique-identifier="uuid_id" xmlns="http://www.idpf.org/2007/opf">
+  <metadata xmlns:opf="http://www.idpf.org/2007/opf" xmlns:calibre="http://calibre.kovidgoyal.net/2009/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/">
+    <dc:publisher>Baka-Tsuki</dc:publisher>
+    <meta content="Gekkou" name="calibre:title_sort" />
+    <dc:description>&lt;div&gt;&lt;p&gt;Gekkou, or "Moonlight", is about the peculiar relationship between a cynical boy and a perfect girl.&lt;/p&gt;&lt;p&gt;Said cynical boy is Nonomiya who spends day in day out in boredom, taking refuge from his dull life in his imagination. One fateful day, he happens upon the notebook of the much-rumored beauty Youko Tsukimori, neglected on the ground. Poking out from it is a scrap of paper with the unexpected title "Murder Recipe". His interest ignited, he immediately stuffs it into his pocket, only to find out the promising recipe contains nothing but scenarios that may or may not lead to deadly accidents, not even worthy of being called a plan.&lt;/p&gt;&lt;p&gt;When he tentatively asks her about it the next day, she hasn't lost anything. But then her father dies. An accident...&lt;/p&gt;&lt;/div&gt;</dc:description>
+    <dc:language>en</dc:language>
+    <dc:creator opf:file-as="Mamiya, Natsuki" opf:role="aut">Natsuki Mamiya</dc:creator>
+    <meta content="2012-01-29T12:30:23+00:00" name="calibre:timestamp" />
+    <dc:title>Gekkou</dc:title>
+    <meta name="cover" content="cover" />
+    <dc:date>2012-01-29</dc:date>
+    <dc:contributor opf:role="bkp">calibre (0.8.35) [http://calibre-ebook.com], Simon [Baka-Tsuki]</dc:contributor>
+    <dc:identifier opf:scheme="uuid" id="uuid_id">afaf5d24-4169-47c4-85ba-424695d1f657</dc:identifier>
+    <meta content="0.9.7" name="Sigil version" />
+    <dc:date xmlns:opf="http://www.idpf.org/2007/opf" opf:event="modification">2020-04-24</dc:date>
+  </metadata>
+  <manifest>
+    <item id="cover" href="Images/cover.jpeg" media-type="image/jpeg"/>
+    <item id="id2" href="Images/1000000000000271000003859B086BE2.jpg" media-type="image/jpeg"/>
+    <item id="id3" href="Images/100000000000031E000004B0D2108C82.jpg" media-type="image/jpeg"/>
+    <item id="id4" href="Images/1000000000000323000004B02CA6AF8C.jpg" media-type="image/jpeg"/>
+    <item id="id5" href="Images/100000000000032C000004B0E057E381.jpg" media-type="image/jpeg"/>
+    <item id="id6" href="Images/100000000000032C000004B0F0B2B42B.jpg" media-type="image/jpeg"/>
+    <item id="id7" href="Images/100000000000032F000004B058255447.jpg" media-type="image/jpeg"/>
+    <item id="id8" href="Images/1000000000000330000004B0AA163B75.jpg" media-type="image/jpeg"/>
+    <item id="id9" href="Images/1000000000000331000004B04A6D6855.jpg" media-type="image/jpeg"/>
+    <item id="id10" href="Images/1000000000000331000004B051F90FFD.jpg" media-type="image/jpeg"/>
+    <item id="id11" href="Images/1000000000000331000004B08E75AB62.jpg" media-type="image/jpeg"/>
+    <item id="id12" href="Images/1000000000000333000004B0B420CCB0.jpg" media-type="image/jpeg"/>
+    <item id="id13" href="Images/1000000000000334000004B07CE9B643.jpg" media-type="image/jpeg"/>
+    <item id="id14" href="Images/100000000000043E000008009EE4D6E8.jpg" media-type="image/jpeg"/>
+    <item id="id15" href="Images/1000000000000477000006502EDBAA25.jpg" media-type="image/jpeg"/>
+    <item id="id16" href="Images/1000000000000477000006503D963D71.jpg" media-type="image/jpeg"/>
+    <item id="id17" href="Images/100002000000007E0000007E13BCF505.png" media-type="image/png"/>
+    <item id="id123" href="Text/index_split_000.xhtml" media-type="application/xhtml+xml"/>
+    <item id="id122" href="Text/index_split_001.xhtml" media-type="application/xhtml+xml"/>
+    <item id="id121" href="Text/index_split_002.xhtml" media-type="application/xhtml+xml"/>
+    <item id="id120" href="Text/index_split_003.xhtml" media-type="application/xhtml+xml"/>
+    <item id="id119" href="Text/index_split_004.xhtml" media-type="application/xhtml+xml"/>
+    <item id="id118" href="Text/index_split_005.xhtml" media-type="application/xhtml+xml"/>
+    <item id="id117" href="Text/index_split_006.xhtml" media-type="application/xhtml+xml"/>
+    <item id="id116" href="Text/index_split_007.xhtml" media-type="application/xhtml+xml"/>
+    <item id="id115" href="Text/index_split_008.xhtml" media-type="application/xhtml+xml"/>
+    <item id="id114" href="Text/index_split_009.xhtml" media-type="application/xhtml+xml"/>
+    <item id="id113" href="Text/index_split_010.xhtml" media-type="application/xhtml+xml"/>
+    <item id="id112" href="Text/index_split_011.xhtml" media-type="application/xhtml+xml"/>
+    <item id="id111" href="Text/index_split_012.xhtml" media-type="application/xhtml+xml"/>
+    <item id="id18" href="Text/index_split_015.xhtml" media-type="application/xhtml+xml"/>
+    <item id="css" href="Styles/stylesheet.css" media-type="text/css"/>
+    <item id="titlepage" href="Text/titlepage.xhtml" media-type="application/xhtml+xml"/>
+    <item id="ncx" href="toc.ncx" media-type="application/x-dtbncx+xml"/>
+  </manifest>
+  <spine toc="ncx">
+    <itemref idref="titlepage"/>
+    <itemref idref="id123"/>
+    <itemref idref="id122"/>
+    <itemref idref="id121"/>
+    <itemref idref="id120"/>
+    <itemref idref="id119"/>
+    <itemref idref="id118"/>
+    <itemref idref="id117"/>
+    <itemref idref="id116"/>
+    <itemref idref="id115"/>
+    <itemref idref="id114"/>
+    <itemref idref="id113"/>
+    <itemref idref="id112"/>
+    <itemref idref="id111"/>
+    <itemref idref="id18"/>
+  </spine>
+  <guide>
+    <reference type="cover" title="Cover" href="Text/titlepage.xhtml"/>
+  </guide>
+</package>

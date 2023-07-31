@@ -1,0 +1,299 @@
+[01/08/2023 6:22:08 am]: code = Error (1), message = System.Data.SQLite.SQLiteException (0x87AF001F): SQL logic error
+table kierl_table already exists
+   at System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, SQLiteCommand command, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   at System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   at System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   at System.Data.SQLite.SQLiteDataReader.NextResult()
+   at System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   at System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.SQLite.SQLiteCommand.ExecuteNonQuery(CommandBehavior behavior)
+   at System.Data.SQLite.SQLiteCommand.ExecuteNonQuery()
+   at WindowsFormsApp3.mainWindow.CreateTable(SQLiteConnection conn) in C:\Users\Ashlera\source\repos\Epub-Reader\mainWindow.cs:line 132
+   at WindowsFormsApp3.mainWindow.Form1_Load(Object sender, EventArgs e) in C:\Users\Ashlera\source\repos\Epub-Reader\mainWindow.cs:line 224
+
+[01/08/2023 6:36:57 am]: code = Error (1), message = System.Data.SQLite.SQLiteException (0x87AF001F): SQL logic error
+table kierl_table already exists
+   at System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, SQLiteCommand command, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   at System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   at System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   at System.Data.SQLite.SQLiteDataReader.NextResult()
+   at System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   at System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.SQLite.SQLiteCommand.ExecuteNonQuery(CommandBehavior behavior)
+   at System.Data.SQLite.SQLiteCommand.ExecuteNonQuery()
+   at WindowsFormsApp3.mainWindow.CreateTable(SQLiteConnection conn) in C:\Users\Ashlera\source\repos\Epub-Reader\mainWindow.cs:line 135
+
+[01/08/2023 6:37:12 am]: System.ArgumentException: Empty file name is not legal.
+Parameter name: sourceFileName
+   at System.IO.File.Copy(String sourceFileName, String destFileName)
+   at WindowsFormsApp3.mainWindow.EPUB_LOAD() in C:\Users\Ashlera\source\repos\Epub-Reader\mainWindow.cs:line 72
+
+[01/08/2023 6:37:18 am]: System.IO.DirectoryNotFoundException: Could not find a part of the path 'C:\Users\Ashlera\source\repos\Epub-Reader\bin\Debug\Epub Library\Mother_of_Learning'.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.Directory.Delete(String fullPath, String userPath, Boolean recursive, Boolean checkHost)
+   at System.IO.Directory.Delete(String path, Boolean recursive)
+   at WindowsFormsApp3.mainWindow.deleteToolStripMenuItem_Click(Object sender, EventArgs e) in C:\Users\Ashlera\source\repos\Epub-Reader\mainWindow.cs:line 376
+
+[01/08/2023 6:37:19 am]: System.IO.DirectoryNotFoundException: Could not find a part of the path 'C:\Users\Ashlera\source\repos\Epub-Reader\bin\Debug\Epub Library\The_Perfect_Run'.
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.Directory.Delete(String fullPath, String userPath, Boolean recursive, Boolean checkHost)
+   at System.IO.Directory.Delete(String path, Boolean recursive)
+   at WindowsFormsApp3.mainWindow.deleteToolStripMenuItem_Click(Object sender, EventArgs e) in C:\Users\Ashlera\source\repos\Epub-Reader\mainWindow.cs:line 376
+
+[01/08/2023 6:42:52 am]: code = Error (1), message = System.Data.SQLite.SQLiteException (0x87AF001F): SQL logic error
+table kierl_table already exists
+   at System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, SQLiteCommand command, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   at System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   at System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   at System.Data.SQLite.SQLiteDataReader.NextResult()
+   at System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   at System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.SQLite.SQLiteCommand.ExecuteNonQuery(CommandBehavior behavior)
+   at System.Data.SQLite.SQLiteCommand.ExecuteNonQuery()
+   at WindowsFormsApp3.mainWindow.CreateTable(SQLiteConnection conn) in C:\Users\Ashlera\source\repos\Epub-Reader\mainWindow.cs:line 135
+
+[01/08/2023 6:42:58 am]: System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection.
+Parameter name: index
+   at System.ThrowHelper.ThrowArgumentOutOfRangeException(ExceptionArgument argument, ExceptionResource resource)
+   at System.Collections.Generic.List`1.get_Item(Int32 index)
+   at WindowsFormsApp3.mainWindow.EPUB_LOAD() in C:\Users\Ashlera\source\repos\Epub-Reader\mainWindow.cs:line 94
+
+[01/08/2023 6:44:22 am]: code = Error (1), message = System.Data.SQLite.SQLiteException (0x87AF001F): SQL logic error
+table kierl_table already exists
+   at System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, SQLiteCommand command, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   at System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   at System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   at System.Data.SQLite.SQLiteDataReader.NextResult()
+   at System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   at System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.SQLite.SQLiteCommand.ExecuteNonQuery(CommandBehavior behavior)
+   at System.Data.SQLite.SQLiteCommand.ExecuteNonQuery()
+   at WindowsFormsApp3.mainWindow.CreateTable(SQLiteConnection conn) in C:\Users\Ashlera\source\repos\Epub-Reader\mainWindow.cs:line 135
+
+[01/08/2023 6:45:02 am]: code = Error (1), message = System.Data.SQLite.SQLiteException (0x87AF001F): SQL logic error
+table kierl_table already exists
+   at System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, SQLiteCommand command, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   at System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   at System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   at System.Data.SQLite.SQLiteDataReader.NextResult()
+   at System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   at System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.SQLite.SQLiteCommand.ExecuteNonQuery(CommandBehavior behavior)
+   at System.Data.SQLite.SQLiteCommand.ExecuteNonQuery()
+   at WindowsFormsApp3.mainWindow.CreateTable(SQLiteConnection conn) in C:\Users\Ashlera\source\repos\Epub-Reader\mainWindow.cs:line 135
+
+[01/08/2023 7:00:28 am]: code = Error (1), message = System.Data.SQLite.SQLiteException (0x87AF001F): SQL logic error
+table kierl_table already exists
+   at System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, SQLiteCommand command, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   at System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   at System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   at System.Data.SQLite.SQLiteDataReader.NextResult()
+   at System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   at System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.SQLite.SQLiteCommand.ExecuteNonQuery(CommandBehavior behavior)
+   at System.Data.SQLite.SQLiteCommand.ExecuteNonQuery()
+   at WindowsFormsApp3.mainWindow.CreateTable(SQLiteConnection conn) in C:\Users\Ashlera\source\repos\Epub-Reader\mainWindow.cs:line 135
+
+[01/08/2023 7:00:41 am]: code = Error (1), message = System.Data.SQLite.SQLiteException (0x87AF001F): SQL logic error
+table kierl_table already exists
+   at System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, SQLiteCommand command, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   at System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   at System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   at System.Data.SQLite.SQLiteDataReader.NextResult()
+   at System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   at System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.SQLite.SQLiteCommand.ExecuteNonQuery(CommandBehavior behavior)
+   at System.Data.SQLite.SQLiteCommand.ExecuteNonQuery()
+   at WindowsFormsApp3.mainWindow.CreateTable(SQLiteConnection conn) in C:\Users\Ashlera\source\repos\Epub-Reader\mainWindow.cs:line 135
+
+[01/08/2023 7:00:57 am]: code = Error (1), message = System.Data.SQLite.SQLiteException (0x87AF001F): SQL logic error
+table kierl_table already exists
+   at System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, SQLiteCommand command, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   at System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   at System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   at System.Data.SQLite.SQLiteDataReader.NextResult()
+   at System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   at System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.SQLite.SQLiteCommand.ExecuteNonQuery(CommandBehavior behavior)
+   at System.Data.SQLite.SQLiteCommand.ExecuteNonQuery()
+   at WindowsFormsApp3.mainWindow.CreateTable(SQLiteConnection conn) in C:\Users\Ashlera\source\repos\Epub-Reader\mainWindow.cs:line 135
+
+[01/08/2023 7:04:05 am]: code = Error (1), message = System.Data.SQLite.SQLiteException (0x87AF001F): SQL logic error
+table kierl_table already exists
+   at System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, SQLiteCommand command, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   at System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   at System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   at System.Data.SQLite.SQLiteDataReader.NextResult()
+   at System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   at System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.SQLite.SQLiteCommand.ExecuteNonQuery(CommandBehavior behavior)
+   at System.Data.SQLite.SQLiteCommand.ExecuteNonQuery()
+   at WindowsFormsApp3.mainWindow.CreateTable(SQLiteConnection conn) in C:\Users\Ashlera\source\repos\Epub-Reader\mainWindow.cs:line 136
+
+[01/08/2023 7:04:21 am]: code = Error (1), message = System.Data.SQLite.SQLiteException (0x87AF001F): SQL logic error
+table kierl_table already exists
+   at System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, SQLiteCommand command, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   at System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   at System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   at System.Data.SQLite.SQLiteDataReader.NextResult()
+   at System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   at System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.SQLite.SQLiteCommand.ExecuteNonQuery(CommandBehavior behavior)
+   at System.Data.SQLite.SQLiteCommand.ExecuteNonQuery()
+   at WindowsFormsApp3.mainWindow.CreateTable(SQLiteConnection conn) in C:\Users\Ashlera\source\repos\Epub-Reader\mainWindow.cs:line 136
+
+[01/08/2023 7:05:03 am]: code = Error (1), message = System.Data.SQLite.SQLiteException (0x87AF001F): SQL logic error
+table kierl_table already exists
+   at System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, SQLiteCommand command, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   at System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   at System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   at System.Data.SQLite.SQLiteDataReader.NextResult()
+   at System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   at System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.SQLite.SQLiteCommand.ExecuteNonQuery(CommandBehavior behavior)
+   at System.Data.SQLite.SQLiteCommand.ExecuteNonQuery()
+   at WindowsFormsApp3.mainWindow.CreateTable(SQLiteConnection conn) in C:\Users\Ashlera\source\repos\Epub-Reader\mainWindow.cs:line 136
+
+[01/08/2023 7:09:29 am]: code = Error (1), message = System.Data.SQLite.SQLiteException (0x87AF001F): SQL logic error
+table kierl_table already exists
+   at System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, SQLiteCommand command, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   at System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   at System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   at System.Data.SQLite.SQLiteDataReader.NextResult()
+   at System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   at System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.SQLite.SQLiteCommand.ExecuteNonQuery(CommandBehavior behavior)
+   at System.Data.SQLite.SQLiteCommand.ExecuteNonQuery()
+   at WindowsFormsApp3.mainWindow.CreateTable(SQLiteConnection conn) in C:\Users\Ashlera\source\repos\Epub-Reader\mainWindow.cs:line 133
+
+[01/08/2023 7:13:34 am]: code = Error (1), message = System.Data.SQLite.SQLiteException (0x87AF001F): SQL logic error
+table kierl_table already exists
+   at System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, SQLiteCommand command, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   at System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   at System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   at System.Data.SQLite.SQLiteDataReader.NextResult()
+   at System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   at System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.SQLite.SQLiteCommand.ExecuteNonQuery(CommandBehavior behavior)
+   at System.Data.SQLite.SQLiteCommand.ExecuteNonQuery()
+   at WindowsFormsApp3.mainWindow.CreateTable(SQLiteConnection conn) in C:\Users\Ashlera\source\repos\Epub-Reader\mainWindow.cs:line 133
+
+[01/08/2023 7:14:24 am]: code = Error (1), message = System.Data.SQLite.SQLiteException (0x87AF001F): SQL logic error
+table kierl_table already exists
+   at System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, SQLiteCommand command, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   at System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   at System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   at System.Data.SQLite.SQLiteDataReader.NextResult()
+   at System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   at System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.SQLite.SQLiteCommand.ExecuteNonQuery(CommandBehavior behavior)
+   at System.Data.SQLite.SQLiteCommand.ExecuteNonQuery()
+   at WindowsFormsApp3.mainWindow.CreateTable(SQLiteConnection conn) in C:\Users\Ashlera\source\repos\Epub-Reader\mainWindow.cs:line 133
+
+[01/08/2023 7:14:26 am]: System.IO.IOException: The directory is not empty.
+
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.Directory.DeleteHelper(String fullPath, String userPath, Boolean recursive, Boolean throwOnTopLevelDirectoryNotFound, WIN32_FIND_DATA& data)
+   at System.IO.Directory.Delete(String fullPath, String userPath, Boolean recursive, Boolean checkHost)
+   at System.IO.Directory.Delete(String path)
+   at WindowsFormsApp3.mainWindow.Delete_AllData(SQLiteConnection conn) in C:\Users\Ashlera\source\repos\Epub-Reader\mainWindow.cs:line 260
+
+[01/08/2023 7:14:38 am]: System.ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection.
+Parameter name: index
+   at System.ThrowHelper.ThrowArgumentOutOfRangeException(ExceptionArgument argument, ExceptionResource resource)
+   at System.Collections.Generic.List`1.get_Item(Int32 index)
+   at WindowsFormsApp3.mainWindow.EPUB_LOAD() in C:\Users\Ashlera\source\repos\Epub-Reader\mainWindow.cs:line 92
+
+[01/08/2023 7:14:47 am]: System.IO.IOException: The directory is not empty.
+
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.Directory.DeleteHelper(String fullPath, String userPath, Boolean recursive, Boolean throwOnTopLevelDirectoryNotFound, WIN32_FIND_DATA& data)
+   at System.IO.Directory.Delete(String fullPath, String userPath, Boolean recursive, Boolean checkHost)
+   at System.IO.Directory.Delete(String path)
+   at WindowsFormsApp3.mainWindow.Delete_AllData(SQLiteConnection conn) in C:\Users\Ashlera\source\repos\Epub-Reader\mainWindow.cs:line 260
+
+[01/08/2023 7:15:25 am]: code = Error (1), message = System.Data.SQLite.SQLiteException (0x87AF001F): SQL logic error
+table kierl_table already exists
+   at System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, SQLiteCommand command, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   at System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   at System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   at System.Data.SQLite.SQLiteDataReader.NextResult()
+   at System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   at System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.SQLite.SQLiteCommand.ExecuteNonQuery(CommandBehavior behavior)
+   at System.Data.SQLite.SQLiteCommand.ExecuteNonQuery()
+   at WindowsFormsApp3.mainWindow.CreateTable(SQLiteConnection conn) in C:\Users\Ashlera\source\repos\Epub-Reader\mainWindow.cs:line 133
+
+[01/08/2023 7:15:33 am]: System.IO.IOException: The directory is not empty.
+
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.Directory.DeleteHelper(String fullPath, String userPath, Boolean recursive, Boolean throwOnTopLevelDirectoryNotFound, WIN32_FIND_DATA& data)
+   at System.IO.Directory.Delete(String fullPath, String userPath, Boolean recursive, Boolean checkHost)
+   at System.IO.Directory.Delete(String path)
+   at WindowsFormsApp3.mainWindow.Delete_AllData(SQLiteConnection conn) in C:\Users\Ashlera\source\repos\Epub-Reader\mainWindow.cs:line 261
+
+[01/08/2023 7:15:50 am]: code = Error (1), message = System.Data.SQLite.SQLiteException (0x87AF001F): SQL logic error
+table kierl_table already exists
+   at System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, SQLiteCommand command, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   at System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   at System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   at System.Data.SQLite.SQLiteDataReader.NextResult()
+   at System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   at System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.SQLite.SQLiteCommand.ExecuteNonQuery(CommandBehavior behavior)
+   at System.Data.SQLite.SQLiteCommand.ExecuteNonQuery()
+   at WindowsFormsApp3.mainWindow.CreateTable(SQLiteConnection conn) in C:\Users\Ashlera\source\repos\Epub-Reader\mainWindow.cs:line 133
+
+[01/08/2023 7:16:01 am]: System.IO.IOException: The directory is not empty.
+
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.Directory.DeleteHelper(String fullPath, String userPath, Boolean recursive, Boolean throwOnTopLevelDirectoryNotFound, WIN32_FIND_DATA& data)
+   at System.IO.Directory.Delete(String fullPath, String userPath, Boolean recursive, Boolean checkHost)
+   at System.IO.Directory.Delete(String path)
+   at WindowsFormsApp3.mainWindow.Delete_AllData(SQLiteConnection conn) in C:\Users\Ashlera\source\repos\Epub-Reader\mainWindow.cs:line 261
+
+[01/08/2023 7:16:24 am]: code = Error (1), message = System.Data.SQLite.SQLiteException (0x87AF001F): SQL logic error
+table kierl_table already exists
+   at System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, SQLiteCommand command, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   at System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   at System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   at System.Data.SQLite.SQLiteDataReader.NextResult()
+   at System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   at System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.SQLite.SQLiteCommand.ExecuteNonQuery(CommandBehavior behavior)
+   at System.Data.SQLite.SQLiteCommand.ExecuteNonQuery()
+   at WindowsFormsApp3.mainWindow.CreateTable(SQLiteConnection conn) in C:\Users\Ashlera\source\repos\Epub-Reader\mainWindow.cs:line 133
+
+[01/08/2023 7:16:28 am]: System.ArgumentException: Empty file name is not legal.
+Parameter name: sourceFileName
+   at System.IO.File.Copy(String sourceFileName, String destFileName)
+   at WindowsFormsApp3.mainWindow.EPUB_LOAD() in C:\Users\Ashlera\source\repos\Epub-Reader\mainWindow.cs:line 70
+
+[01/08/2023 7:16:42 am]: System.IO.IOException: The directory is not empty.
+
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.Directory.DeleteHelper(String fullPath, String userPath, Boolean recursive, Boolean throwOnTopLevelDirectoryNotFound, WIN32_FIND_DATA& data)
+   at System.IO.Directory.Delete(String fullPath, String userPath, Boolean recursive, Boolean checkHost)
+   at System.IO.Directory.Delete(String path)
+   at WindowsFormsApp3.mainWindow.Delete_AllData(SQLiteConnection conn) in C:\Users\Ashlera\source\repos\Epub-Reader\mainWindow.cs:line 261
+
+[01/08/2023 7:17:33 am]: code = Error (1), message = System.Data.SQLite.SQLiteException (0x87AF001F): SQL logic error
+table kierl_table already exists
+   at System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, SQLiteCommand command, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   at System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   at System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   at System.Data.SQLite.SQLiteDataReader.NextResult()
+   at System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   at System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.SQLite.SQLiteCommand.ExecuteNonQuery(CommandBehavior behavior)
+   at System.Data.SQLite.SQLiteCommand.ExecuteNonQuery()
+   at WindowsFormsApp3.mainWindow.CreateTable(SQLiteConnection conn) in C:\Users\Ashlera\source\repos\Epub-Reader\mainWindow.cs:line 133
+
+[01/08/2023 7:17:44 am]: System.IO.IOException: The directory is not empty.
+
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.Directory.DeleteHelper(String fullPath, String userPath, Boolean recursive, Boolean throwOnTopLevelDirectoryNotFound, WIN32_FIND_DATA& data)
+   at System.IO.Directory.Delete(String fullPath, String userPath, Boolean recursive, Boolean checkHost)
+   at System.IO.Directory.Delete(String path)
+   at WindowsFormsApp3.mainWindow.Delete_AllData(SQLiteConnection conn) in C:\Users\Ashlera\source\repos\Epub-Reader\mainWindow.cs:line 261
+

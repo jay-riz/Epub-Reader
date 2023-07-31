@@ -224,6 +224,7 @@
             // toolTip1
             // 
             this.toolTip1.IsBalloon = true;
+            this.toolTip1.Popup += new System.Windows.Forms.PopupEventHandler(this.toolTip1_Popup);
             // 
             // contextMenuStrip1
             // 
@@ -232,27 +233,28 @@
             this.deleteToolStripMenuItem,
             this.editToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(130, 70);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(131, 70);
             // 
             // viewBookToolStripMenuItem
             // 
             this.viewBookToolStripMenuItem.Name = "viewBookToolStripMenuItem";
-            this.viewBookToolStripMenuItem.Size = new System.Drawing.Size(129, 22);
+            this.viewBookToolStripMenuItem.Size = new System.Drawing.Size(130, 22);
             this.viewBookToolStripMenuItem.Text = "View Book";
             this.viewBookToolStripMenuItem.Click += new System.EventHandler(this.viewBookToolStripMenuItem_Click);
             // 
             // deleteToolStripMenuItem
             // 
             this.deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
-            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(129, 22);
+            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(130, 22);
             this.deleteToolStripMenuItem.Text = "Delete";
             this.deleteToolStripMenuItem.Click += new System.EventHandler(this.deleteToolStripMenuItem_Click);
             // 
             // editToolStripMenuItem
             // 
             this.editToolStripMenuItem.Name = "editToolStripMenuItem";
-            this.editToolStripMenuItem.Size = new System.Drawing.Size(129, 22);
-            this.editToolStripMenuItem.Text = "Edit";
+            this.editToolStripMenuItem.Size = new System.Drawing.Size(130, 22);
+            this.editToolStripMenuItem.Text = "Delete ALL";
+            this.editToolStripMenuItem.Click += new System.EventHandler(this.editToolStripMenuItem_Click);
             // 
             // dataGridView1
             // 

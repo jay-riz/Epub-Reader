@@ -6,7 +6,7 @@ using System.IO;
 using System.Linq;
 using System.Web;
 using System.Windows.Forms;
-
+using WindowsFormsApp3.OtherFuncs;
 
 namespace WindowsFormsApp3  
 {
@@ -16,7 +16,7 @@ namespace WindowsFormsApp3
 
         List<string> NCX_FILEPATH = new List<string>();
         List<string> TOSUBSTRING_SUBTEXT_PATH = new List<string>();
-       public static List<string> CSSFOUNDList = new List<string>();
+        public static List<string> CSSFOUNDList = new List<string>();
 
         List<string> ParseListBox = new List<string>();
 
@@ -62,11 +62,8 @@ namespace WindowsFormsApp3
         {
             try
             {
-                string pointerPath = Application.StartupPath + @"\.cache\sys.txt";
-                string sourceDirectory = File.ReadAllText(pointerPath);
-                //DirectoryInfo di = new DirectoryInfo(sourceDirectory);
-
-                var _SearchTocNcs = Directory.EnumerateFiles(sourceDirectory, "*.ncx", SearchOption.AllDirectories);
+                
+                var _SearchTocNcs = Directory.EnumerateFiles(Global.SourceDirectoryOfSysTxt(), "*.ncx", SearchOption.AllDirectories);
 
                 foreach (string Toc in _SearchTocNcs)
                 {
@@ -93,10 +90,8 @@ namespace WindowsFormsApp3
 
         public static void KIERLSEARCHFORCSS()
         {
-            string pointerPath = Application.StartupPath + @"\.cache\sys.txt";
-            string sourceDirectory = File.ReadAllText(pointerPath);
 
-            var _PERFILECSS = Directory.EnumerateFiles(sourceDirectory, "*.css", SearchOption.AllDirectories);
+            var _PERFILECSS = Directory.EnumerateFiles(Global.SourceDirectoryOfSysTxt(), "*.css", SearchOption.AllDirectories);
 
             foreach (string css in _PERFILECSS)
             {
@@ -126,8 +121,6 @@ namespace WindowsFormsApp3
         private void ReadAllXhtml_html()
         {
 
-            string pointerPath = Application.StartupPath + @"\.cache\sys.txt";
-            string sourceDirectory = File.ReadAllText(pointerPath);
             //DirectoryInfo di = new DirectoryInfo(sourceDirectory);
             List<string> tableOfXHTMLContents = new List<string>();
             List<string> tableOfHTMLOnly = new List<string>();
@@ -144,15 +137,15 @@ namespace WindowsFormsApp3
             {
                 SQLiteConnection sqlite_conn;
                 sqlite_conn = CreateConnection();
-                DeleteData(sqlite_conn, pointerPath);
+                DeleteData(sqlite_conn, Global.SourceDirectoryOfSysTxt());
                 
             }
 
             try
             {
 
-                var XhtmlFiles = Directory.EnumerateFiles(sourceDirectory, "*.xhtml", SearchOption.AllDirectories);
-                var OnlyHTML = Directory.EnumerateFiles(sourceDirectory, "*.html", SearchOption.AllDirectories);
+                var XhtmlFiles = Directory.EnumerateFiles(Global.SourceDirectoryOfSysTxt(), "*.xhtml", SearchOption.AllDirectories);
+                var OnlyHTML = Directory.EnumerateFiles(Global.SourceDirectoryOfSysTxt(), "*.html", SearchOption.AllDirectories);
 
                 foreach (string currentFile in XhtmlFiles)
                 {

@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.Linq;
 using System.Drawing;
 using WindowsFormsApp3.OtherFuncs;
+using System.Xml.Linq;
 
 namespace WindowsFormsApp3
 {
@@ -18,7 +19,6 @@ namespace WindowsFormsApp3
     {
        public static string colorPanelofMainWindow = "#045c73";
        public static string colorFontOfMainWindow = "#f68818";
-       public string LIBRARY_PATH = Application.StartupPath + @"\Epub Library";
        public List<string> textOfPath = new List<string> ();
        public List<string> TocTocTocFolder = new List<string>();
         public mainWindow()
@@ -53,14 +53,12 @@ namespace WindowsFormsApp3
                 openFileDialog.Filter = "EPUB files (*.epub)|*.epub;";
                 openFileDialog.ShowDialog();//This should be at the top of this thread.
 
-                //string LIBRARY_PATH = Application.StartupPath + @"\Epub Library";
-
                 string store_epubPath = openFileDialog.FileName; ;
 
-                CreateDir(LIBRARY_PATH);
+                CreateDir(Global.LIBRARY_PATH);
 
                 string _onlyFileNameWithoutExt = Path.GetFileNameWithoutExtension(openFileDialog.FileName);
-                string _epubFolder = LIBRARY_PATH + @"\" + _onlyFileNameWithoutExt;             
+                string _epubFolder = Global.LIBRARY_PATH + @"\" + _onlyFileNameWithoutExt;             
 
                 CreateDir(_epubFolder);
 
@@ -102,7 +100,7 @@ namespace WindowsFormsApp3
             }
             catch (System.ArgumentException ex)
             {
-                Logging.LogError(ex.ToString());
+                Global.LogError(ex.ToString());
             } // end
 
         }
@@ -119,7 +117,7 @@ namespace WindowsFormsApp3
             }
             catch (Exception ex)
             {
-                Logging.LogError(ex.ToString()) ;
+                Global.LogError(ex.ToString()) ;
             }
             return sqlite_conn;
         }
@@ -136,7 +134,7 @@ namespace WindowsFormsApp3
             }
             catch (System.Data.SQLite.SQLiteException ex)
             {
-                Logging.LogError(ex.ToString());
+                Global.LogError(ex.ToString());
             }
            
         }
@@ -234,19 +232,50 @@ namespace WindowsFormsApp3
             }
             catch (Exception ex)
             {
-                Logging.LogError(ex.ToString());
+                Global.LogError(ex.ToString());
             }
             ReadData(sqlite_conn);
 
             // If directory does not exist, create it
-            CreateDir(LIBRARY_PATH);
+            CreateDir(Global.LIBRARY_PATH);
         }
         private void DeleteData(SQLiteConnection conn, string xName)
         {
+
             SQLiteCommand sqlite_cmd;
             sqlite_cmd = conn.CreateCommand();
             sqlite_cmd.CommandText = @"DELETE FROM kierl_table WHERE book_name LIKE '" + xName + "'";
             sqlite_cmd.ExecuteNonQuery();
+
+        }
+
+        private void Delete_AllData(SQLiteConnection conn)
+        {
+            SQLiteCommand sqlite_cmd;
+            sqlite_cmd = conn.CreateCommand();
+            sqlite_cmd.CommandText = @"DELETE FROM kierl_table";
+            sqlite_cmd.ExecuteNonQuery();
+            try
+            {
+                Directory.Delete(Global.LIBRARY_PATH);
+            }
+            catch (DirectoryNotFoundException dn)
+            {
+                Global.LogError(dn.ToString());
+            }
+            catch (UnauthorizedAccessException ua)
+            {
+                Global.LogError(ua.ToString());
+            }
+            catch (IOException ie)
+            {
+                Global.LogError(ie.ToString());
+            }
+            finally
+            {
+                Directory.Delete(Global.LIBRARY_PATH, true);
+
+            }
 
         }
         private void btnLibrary_Click(object sender, EventArgs e)
@@ -255,7 +284,7 @@ namespace WindowsFormsApp3
             {
                 ProcessStartInfo startInfo = new ProcessStartInfo
                 {
-                    Arguments = LIBRARY_PATH,
+                    Arguments = Global.LIBRARY_PATH,
                     FileName = "explorer.exe"
                 };
 
@@ -263,8 +292,8 @@ namespace WindowsFormsApp3
             }
             catch (Exception ex)
             {
-                MessageBox.Show(string.Format("{0} Directory does not exist!", LIBRARY_PATH));
-                Logging.LogError(ex.ToString());
+                MessageBox.Show(string.Format("{0} Directory does not exist!", Global.LIBRARY_PATH));
+                Global.LogError(ex.ToString());
             }
         }
 
@@ -281,8 +310,7 @@ namespace WindowsFormsApp3
             btnRefLoadingTxt = btnAddBook.Text;
             ReadData(sqlite_conn);
             
-           
-
+         
         }
 
         public void SearchForCover()
@@ -318,7 +346,7 @@ namespace WindowsFormsApp3
             }
             catch (System.ArgumentOutOfRangeException ex)
             {
-                Logging.LogError(ex.ToString());
+                Global.LogError(ex.ToString());
             }
             
         }
@@ -371,13 +399,14 @@ namespace WindowsFormsApp3
             sqlite_conn = CreateConnection();
             DeleteData(sqlite_conn, textBox1.Text);
             ReadData(sqlite_conn);
+
             try
             {
-                Directory.Delete(LIBRARY_PATH + @"\" + textBox1.Text, true);
+                Directory.Delete(Global.LIBRARY_PATH + @"\" + textBox1.Text, true);
             }
             catch (Exception ex)
             {
-                Logging.LogError(ex.ToString());
+                Global.LogError(ex.ToString());
             }
             textBox1.Clear();
             textBox2.Clear();
@@ -436,6 +465,19 @@ namespace WindowsFormsApp3
         }
 
         private void leftPanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void editToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SQLiteConnection sqlite_conn;
+            sqlite_conn = CreateConnection();
+            Delete_AllData(sqlite_conn);
+            ReadData(sqlite_conn);
+        }
+
+        private void toolTip1_Popup(object sender, PopupEventArgs e)
         {
 
         }
